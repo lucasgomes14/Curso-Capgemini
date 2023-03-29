@@ -5,8 +5,8 @@
 package ExercicioInterfaceGrafica;
 
 /**
- *
- * @author lucas
+ * 
+ *  @author lucas
  */
 public class TelaDeLogin extends javax.swing.JFrame {
 

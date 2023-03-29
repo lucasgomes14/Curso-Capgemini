@@ -25,4 +25,13 @@ public class ConnectionFactory {
             throw new RuntimeException("Erro na conexão do banco de dados", e);
         }
     }
+    
+    public static void closeConnection(Connection connection) {
+        try {
+            if(connection != null)
+                connection.close();
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao fechar a conexão com o banco de dados", e);
+        }
+    }
 }

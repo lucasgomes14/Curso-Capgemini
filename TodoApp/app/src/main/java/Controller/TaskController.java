@@ -53,7 +53,7 @@ public class TaskController {
             //executando a query
             statement.execute();
             
-        } catch (Exception e) {
+        } catch (SQLException e) {
             throw new RuntimeException("Erro ao salvar a tarefa" + e.getMessage(),e);
         } finally {
             ConnectionFactory.closeConnection(conn, statement);
@@ -94,7 +94,7 @@ public class TaskController {
             
             //executando a query
             statement.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             throw new RuntimeException("Erro ao atualizar a tarefa" + e.getMessage(),e);
         } finally {
             ConnectionFactory.closeConnection(conn, statement);
@@ -168,7 +168,7 @@ public class TaskController {
                 tasks.add(task);        
             }
             
-        } catch (Exception e) {
+        } catch (SQLException e) {
             throw new RuntimeException("Erro ao fazer lista das tarefas" + e.getMessage(),e);
         } finally {
             ConnectionFactory.closeConnection(conn, statement, resultSet);            

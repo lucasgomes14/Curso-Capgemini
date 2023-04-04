@@ -37,8 +37,6 @@ public class Task {
         this.createdAt = createdAt;
     }
     
-    
-
     public int getId() {
         return id;
     }

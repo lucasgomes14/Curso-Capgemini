@@ -3,12 +3,17 @@
  */
 package TodoApp;
 
-import Util.ConnectionFactory;
-import java.sql.Connection;
+import Controller.ProjectController;
+import Model.Project;
+import org.checkerframework.checker.units.qual.A;
 
 public class App {
     public static void main(String[] args) {
-        Connection c = ConnectionFactory.getConnection();
-        ConnectionFactory.closeConnection(c);
+        ProjectController projectController = new ProjectController();
+        
+        Project project = new Project();
+        project.setName("projeto teste");
+        project.setDescription("description teste");
+        projectController.save(project);
     }
 }

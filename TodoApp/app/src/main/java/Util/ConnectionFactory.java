@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  */
 public class ConnectionFactory {
     public static final String DRIVER = "com.mysql.jdbc.Driver";
-    public static final String URL = "jdbc:mysql://localhost:3306/TodoApp";
+    public static final String URL = "jdbc:mysql://127.0.0.1:3306/TodoApp?useTimezone=true&serverTimezone=UTC&useSSL=false";
     public static final String USER = "curso";
     public static final String PASS = "12345678";
     
